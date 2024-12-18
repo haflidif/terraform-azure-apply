@@ -117,7 +117,7 @@ runs:
       working-directory: ${{ inputs.path }}
 
     - name: Downloading Artifact
-      uses: actions/download-artifact@v4.1.7
+      uses: actions/download-artifact@v4.1.8
       with:
         name: "${{ inputs.plan_mode }}-${{ inputs.tf_state_file }}"
         path: ${{ inputs.plan_mode }}/staging
@@ -129,7 +129,7 @@ runs:
       working-directory: ${{ inputs.plan_mode }}/staging
 
     - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v3.1.1
+      uses: hashicorp/setup-terraform@v3.1.2
       with:
         terraform_version: ${{ inputs.tf_version }}
         terraform_wrapper: true
