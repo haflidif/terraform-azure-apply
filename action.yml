@@ -147,14 +147,14 @@ runs:
       working-directory: ${{ inputs.plan_mode }}/staging
     
     - name: Terraform Apply (Deploy)
-      if: ${{ inputs.plan_mode == 'deploy'' }}
+      if: ${{ inputs.plan_mode == 'deploy' }}
       shell: bash
       run: |
         terraform apply deploy_plan.tfplan
       working-directory: ${{ inputs.plan_mode }}/staging
     
     - name: Terraform Apply (Destroy)
-      if: ${{ inputs.plan_mode == 'destroy'' }}
+      if: ${{ inputs.plan_mode == 'destroy' }}
       shell: bash
       run: |
         terraform apply destroy_plan.tfplan
