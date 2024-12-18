@@ -2,6 +2,11 @@ name: 'Terraform Apply - Azure'
 description: 'Downloads artifact created by `haflidif/terraform-azure-plan` and runs Terraform apply on Azure by using Azure backend.'
 
 inputs:
+  path:
+    description: '(Optional) Path to the Terraform configuration files, defaults to the current working directory'
+    required: false
+    default: .
+
   plan_mode:
     description: '(Optional) The mode to run the plan in. Valid options are `deploy` or `destroy`. Defaults to `deploy`.'
     type: string
